@@ -1,19 +1,19 @@
-import tw, { styled, css, theme } from 'twin.macro'
+import tw, { styled, css, theme } from 'twin.macro';
 
 interface ButtonProps {
-  $variant?: 'primary' | 'secondary'
-  $isSmall?: boolean
+  $variant?: 'primary' | 'secondary';
+  $isSmall?: boolean;
 }
 
 const Button = styled.button<ButtonProps>(({ $variant, $isSmall }) => [
   // The common button styles added with the tw import
-  tw`px-8 py-2 rounded transform duration-75`,
+  tw`transform rounded px-8 py-2 duration-75`,
 
   // Use the variant grouping feature to add variants to multiple classes
   tw`hocus:(scale-105 text-yellow-400)`,
 
   // Use props to conditionally style your components
-  $variant === 'primary' && tw`bg-black text-white border-black`,
+  $variant === 'primary' && tw`border-black bg-black text-white`,
 
   // Combine regular css with tailwind classes within backticks
   $variant === 'secondary' && [
@@ -30,6 +30,6 @@ const Button = styled.button<ButtonProps>(({ $variant, $isSmall }) => [
   css`
     color: ${theme`colors.white`};
   `,
-])
+]);
 
-export default Button
+export default Button;

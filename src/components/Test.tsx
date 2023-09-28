@@ -5,10 +5,10 @@ interface ContainerProps {
 }
 
 const Container = styled.div<ContainerProps>(({ $hasBg }) => {
-  return [tw`flex w-full p-4`, $hasBg && tw`bg-yellow-100`];
+  return [tw`flex w-full p-4`, $hasBg && tw`bg-white text-black`];
 });
 
-const Column = tw.div`w-1/2`;
+const Column = tw.div`w-1/2 hover:opacity-75`;
 
 export const Test = ({ $hasBg }: ContainerProps) => {
   return (
