@@ -20,7 +20,7 @@ const Button = styled.button<ButtonProps>(({ $variant, $isSmall }) => [
     css`
       box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
     `,
-    tw`border-2 border-yellow-600`,
+    tw`border-primary-dark bg-primary border-2`,
   ],
 
   // Conditional props can be used
