@@ -10,7 +10,7 @@ const Container = styled.div<ContainerProps>(({ $hasBg }) => {
 
 const Column = tw.div`w-1/2 hover:opacity-75`;
 
-export const Test = ({ $hasBg }: ContainerProps) => {
+const Test = ({ $hasBg }: ContainerProps) => {
   return (
     <Container {...{ $hasBg }}>
       <Column>
@@ -34,3 +34,5 @@ export const Test = ({ $hasBg }: ContainerProps) => {
     </Container>
   );
 };
+
+export default Test;

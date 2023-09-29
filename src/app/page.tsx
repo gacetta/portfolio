@@ -1,14 +1,12 @@
 'use client';
 import React from 'react';
 import tw from 'twin.macro';
-import { Button } from '../components';
-import { Test } from '@/components/Test';
-import { Navbar } from '@/components/Navbar';
+import { Button, Test, Navbar, Hero } from '../components';
 
 const styles = {
   // Move long class sets out of jsx to keep it scannable
   container: ({ hasBackground }: { hasBackground: boolean }) => [
-    tw`flex h-screen justify-center`,
+    tw`flex h-screen flex-col justify-center`,
     hasBackground && tw`bg-gradient-to-b from-electric to-ribbon `,
   ],
 };
@@ -16,6 +14,7 @@ const styles = {
 const Home = () => (
   <div css={styles.container({ hasBackground: true })}>
     <Navbar />
+    <Hero />
   </div>
 );
 

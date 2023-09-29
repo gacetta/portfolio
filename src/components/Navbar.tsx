@@ -2,17 +2,16 @@ import tw, { styled } from 'twin.macro';
 import Button from './Button';
 
 const StyledNavbar = tw.div`
-  to-gray
+  fixed
+  inset-0
   flex
+  h-16
   max-h-16
   w-screen
   items-center
   justify-between
   space-x-3
-  bg-gradient-to-r
-  from-transparent
-  from-15%
-  to-75%
+  border-b-2
   p-3
   pl-5
 `;
@@ -22,7 +21,7 @@ const StyledControlPanel = tw.div`
   space-x-3
 `;
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <StyledNavbar>
       <p tw="text-4xl">Michael Gacetta</p>
@@ -43,3 +42,5 @@ export const Navbar = () => {
     </StyledNavbar>
   );
 };
+
+export default Navbar;
