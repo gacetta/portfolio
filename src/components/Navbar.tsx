@@ -13,7 +13,8 @@ const StyledNavbar = tw.div`
   justify-between
   space-x-3
   p-3
-  pl-5
+  pl-7
+  pr-7
 `;
 
 const StyledControlPanel = tw.div`
