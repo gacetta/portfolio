@@ -1,26 +1,23 @@
-import tw from 'twin.macro';
+import tw, { styled, css, theme } from 'twin.macro';
 
-const StyledSection = tw.section`
-  relative
-  flex
-  max-h-screen
-  min-h-screen
-  flex-col
-  items-center
-  justify-start
-  border-4
-  border-red-500
-  bg-gray
-`;
+interface SectionProps {
+  $isFullScreen?: boolean;
+  id?: String;
+  children?: React.ReactNode;
+}
 
-const Section = ({
-  id,
-  children,
-}: {
-  id?: string;
-  children: React.ReactNode;
-}) => {
-  return <StyledSection id={id}>{children}</StyledSection>;
-};
+const StyledSection = styled.section<SectionProps>(({ $isFullScreen }) => [
+  tw`
+    relative
+    flex 
+    h-full 
+    flex-col 
+    items-center 
+    border-2
+    border-red-500
+    bg-gray
+    p-4`,
+  $isFullScreen ? tw`max-h-screen min-h-screen` : tw`h-max`,
+]);
 
-export default Section;
+export default StyledSection;

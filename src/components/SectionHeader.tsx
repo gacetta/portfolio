@@ -13,7 +13,13 @@ interface SectionHeaderProps {
 // };
 
 const SectionHeader = styled.h2<SectionHeaderProps>(({ text }) => [
-  tw`m-4 mt-28 p-4 text-center text-5xl font-semibold uppercase`,
+  tw`
+    m-4 
+    p-4 
+    text-center 
+    text-5xl 
+    font-semibold 
+    uppercase`,
 ]);
 
 export default SectionHeader;

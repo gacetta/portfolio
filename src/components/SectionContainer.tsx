@@ -1,12 +1,13 @@
-import tw from 'twin.macro';
+import tw, { css, styled } from 'twin.macro';
 
-const StyledContainer = tw.div`
+const SectionContainer = styled.div(() => [
+  tw`
   container
-  bg-green-500
-`;
-
-const SectionContainer = ({ children }: { children?: React.ReactNode }) => (
-  <StyledContainer>{children}</StyledContainer>
-);
+  `,
+  css`
+    background-color: white;
+    height: 100%;
+  `,
+]);
 
 export default SectionContainer;
