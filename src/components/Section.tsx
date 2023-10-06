@@ -7,9 +7,10 @@ const StyledSection = tw.section`
   min-h-screen
   flex-col
   items-center
-  justify-center
-  border-8
-  bg-yellow-300
+  justify-start
+  border-4
+  border-red-500
+  bg-gray
 `;
 
 const Section = ({

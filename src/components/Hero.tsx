@@ -4,10 +4,10 @@ import heroImage from '../../public/assets/images/headshot-lemur.jpg';
 
 const StyledHeroContainer = tw.section`
   flex
+  h-screen
   max-h-screen
   min-h-screen
   justify-end
-  bg-white
 `;
 
 const heroImageStyle = {
@@ -23,15 +23,15 @@ const heroImageStyle = {
   'z-index': -1,
 };
 
-const StyledHeroHeader = tw.h1`
-  absolute
-  bottom-10
-  left-10
-  z-50
+const StyledHeaderContainer = tw.div`
+  z-40
+  flex
+  h-screen
   w-max
   min-w-max
-  bg-gray
-  p-4
+  flex-col
+  border-2
+  p-1
   text-6xl
   font-bold
   text-secondary
@@ -41,8 +41,11 @@ const StyledHeroHeader = tw.h1`
 const Hero = () => {
   return (
     <StyledHeroContainer>
-      <h1 tw="absolute left-0 top-1/2 text-6xl m-10">Hero</h1>
-      <StyledHeroHeader>i am a software engineer</StyledHeroHeader>
+      {/* <h1 tw="absolute left-0 top-1/2 text-6xl m-10">Hero</h1> */}
+      {/* <StyledHeaderContainer>
+        <div tw="h-2/3"></div>
+        <h1 tw="sticky top-0 left-0 h-max bg-black p-2">michael gacetta</h1>
+      </StyledHeaderContainer> */}
       <Image src={heroImage} alt="Hero image" style={heroImageStyle} />
     </StyledHeroContainer>
   );
