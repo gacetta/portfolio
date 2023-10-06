@@ -1,11 +1,11 @@
 import tw, { styled } from 'twin.macro';
 import Button from './Button';
+import { animateScroll as scroll } from 'react-scroll';
 
 const StyledFooter = tw.div`
   z-50
   flex
   h-16
-  max-h-16
   w-full
   items-center
   justify-center
@@ -19,17 +19,23 @@ const StyledControlPanel = tw.div`
    mr-6
 `;
 
-const Navbar = () => {
+const scrollToTop = () => {
+  scroll.scrollToTop({ duration: 1000 });
+};
+
+const Footer = () => {
   return (
     <StyledFooter>
       <p tw="text-4xl text-center">Footer</p>
       <StyledControlPanel>
-        <Button $isSmall={true} $variant="secondary">
-          To Top
-        </Button>
+        <a onClick={scrollToTop}>
+          <Button $isSmall={true} $variant="secondary">
+            To Top
+          </Button>
+        </a>
       </StyledControlPanel>
     </StyledFooter>
   );
 };
 
-export default Navbar;
+export default Footer;

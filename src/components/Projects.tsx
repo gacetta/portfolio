@@ -3,7 +3,7 @@ import { Section, SectionContainer, SectionHeader } from './index';
 
 const Projects = () => {
   return (
-    <Section>
+    <Section id="#projects">
       <SectionHeader>Projects</SectionHeader>
       <SectionContainer>
         <ul>

@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button = styled.button<ButtonProps>(({ $variant, $isSmall }) => [
   // The common button styles added with the tw import
-  tw`transform rounded px-8 py-2 duration-75`,
+  tw`transform rounded px-6 py-2 duration-75`,
 
   // Use the variant grouping feature to add variants to multiple classes
   tw`hocus:(scale-105 text-yellow-400)`,
@@ -20,7 +20,7 @@ const Button = styled.button<ButtonProps>(({ $variant, $isSmall }) => [
     css`
       box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
     `,
-    tw`border-primary-dark bg-primary border-2`,
+    tw`border-2 border-primary-dark bg-primary`,
   ],
 
   // Conditional props can be used

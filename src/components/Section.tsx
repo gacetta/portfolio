@@ -12,8 +12,14 @@ const StyledSection = tw.section`
   bg-yellow-300
 `;
 
-const Section = ({ children }: { children: React.ReactNode }) => {
-  return <StyledSection>{children}</StyledSection>;
+const Section = ({
+  id,
+  children,
+}: {
+  id?: string;
+  children: React.ReactNode;
+}) => {
+  return <StyledSection id={id}>{children}</StyledSection>;
 };
 
 export default Section;

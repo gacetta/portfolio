@@ -3,7 +3,7 @@ import { Button, Section, SectionContainer, SectionHeader } from './index';
 
 const Resume = () => {
   return (
-    <Section>
+    <Section id="resume">
       <SectionHeader>resume</SectionHeader>
       <SectionContainer>
         <ul>
